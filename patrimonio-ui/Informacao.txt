@@ -1,0 +1,8 @@
+Uma apliacação angular e composta de componentes.
+Este simples projeto tem apenas um componente.
+
+Em uma aplicação Angular, temos nosso app.module.ts.
+No app.module.ts, há a declaração do componente principal da aplicação: AppComponent.
+No AppComponent é feita a declaração de outros componentes, assim começa a ser criada a arvore de componentes da aplicação.
+Cada componente tem sua classe, onde é implementada sua lógica, tem a declaração de seu template, css, etc...
+No arquivo style.css podemos inserir estilos globais, ou seja, para toda aplicação.

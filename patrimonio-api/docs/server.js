@@ -1,3 +1,4 @@
+//le o arquivo: teste-get-itens.html, arquivo que faz uma reqiosição ajax
 const express = require('express');
 const app = express();
 
