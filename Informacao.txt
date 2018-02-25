@@ -6,3 +6,6 @@ No app.module.ts, há a declaração do componente principal da aplicação: App
 No AppComponent é feita a declaração de outros componentes, assim começa a ser criada a arvore de componentes da aplicação.
 Cada componente tem sua classe, onde é implementada sua lógica, tem a declaração de seu template, css, etc...
 No arquivo style.css podemos inserir estilos globais, ou seja, para toda aplicação.
+No arquivo package.json é listado as dependencias.
+No arquivo angular .angular-cli.json é declarado os arquivos.css que usamos na aplicação.
+Tudo que é instalado na aplicação usando npm fica na pasta node_modules
