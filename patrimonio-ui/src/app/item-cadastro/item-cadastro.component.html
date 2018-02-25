@@ -31,14 +31,28 @@
   </div>
 </form>
 
+<!-->utilizando css do primeng - grid.css divide a tela em 12 colunas<-->
 <div class="ui-g">
+  <!-->
+    linha/div com 12 colunas, ou seja, utilizando tela inteira
+    poderia dividir e de acordo com a minha necessidade
+  <-->
   <div class="ui-g-12">
-
+    <!-->[value]="itens": para pegar os valores do array itens, isto é chamado de
+      property bind, colocar os colchotes, [value], senão pegaria apenas o valor de uma String:'itens'<-->
     <p-dataTable [value]="itens">
       <p-column field="etiqueta" header="Etiqueta"></p-column>
       <p-column field="descricao" header="Descrição"></p-column>
       <p-column header="Aquisição">
+        <!-->
+          <ng-template> para customizar a coluna da data para podermos
+          formatar a data com pipe date, estou customizando o body da coluna de data
+          <ng-template pTemplate="body",pois eu poderia customizar, por exemplo, o header dessa coluna. 
+          let-item="rowData" - let para poder declarar uma variavel<.
+          item, nome que dei para variavel.
+          rowData, deve ser esse nome para poder acessar os da linha atual no loop -->
         <ng-template pTemplate="body" let-item="rowData">
+          <!-->formata a data usando pipe date, pipe é essa barra '|'<-->
           {{ item.dataAquisicao | date:'dd/MM/yyyy' }}
         </ng-template>
       </p-column>

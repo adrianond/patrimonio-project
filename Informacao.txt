@@ -1,11 +1,15 @@
 Uma apliacação angular e composta de componentes.
 Este simples projeto tem apenas um componente.
 
+Gerar um coponente com angular CLI - ng g c nome do componente
+Gerar um serviço com angular CLI - ng g s nome do serviço
+
 Em uma aplicação Angular, temos nosso app.module.ts.
 No app.module.ts, há a declaração do componente principal da aplicação: AppComponent.
 No AppComponent é feita a declaração de outros componentes, assim começa a ser criada a arvore de componentes da aplicação.
 Cada componente tem sua classe, onde é implementada sua lógica, tem a declaração de seu template, css, etc...
 No arquivo style.css podemos inserir estilos globais, ou seja, para toda aplicação.
 No arquivo package.json é listado as dependencias.
-No arquivo angular .angular-cli.json é declarado os arquivos.css que usamos na aplicação.
+No arquivo angular .angular-cli.json é declarado os arquivos.css, arquivos css nao declarados no compononentes, por exemplo, o navbar component tem seu css 
+declarado em então não precisa ser declarado nesse arquivo, mas estou utizando css do primeng, estes precisam ser declarados nesse arquivo dentro do array styles.
 Tudo que é instalado na aplicação usando npm fica na pasta node_modules
