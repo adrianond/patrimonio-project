@@ -25,7 +25,9 @@ import { ItemCadastroComponent } from './item-cadastro/item-cadastro.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    //utilizado pelos componentes do primeng
     BrowserAnimationsModule,
+    //para ter acesso aos recurosos de formulário do Angular
     FormsModule,
     //declara os componetes importados do primeng
     DataTableModule,
@@ -34,6 +36,8 @@ import { ItemCadastroComponent } from './item-cadastro/item-cadastro.component';
     InputMaskModule,
     CalendarModule
   ],
+  //aqui deve ser declarado o serviço para este ser provido, assim podemos usar o serviço
+  // em qualquer lugar da aplicação
   providers: [
     ItemService
   ],

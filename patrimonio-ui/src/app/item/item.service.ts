@@ -15,11 +15,13 @@ export class ItemService {
   listar() {
     //o angular retorna um objeto do tipo observable, esse objeto
     //fica aguardando o retorno da chamada para nossa aplicação
-    //não ficar esperando esse retorno, ou seja, deve ser uma chamada assincrona
+    //não ficar esperando esse retorno, ou seja, deve ser uma chamada assincrona.
+    //http.get<any[]>: significa que o metodo get pode retornar um array de qualquer coisa
     return this.http.get<any[]>(this.itensUrl);
   }
 
-  //metodo para adicionar um item 
+  //metodo para adicionar um item
+  //item: any - item de qualquer tipo
   adicionar(item: any) {
     return this.http.post(this.itensUrl, item);
   }

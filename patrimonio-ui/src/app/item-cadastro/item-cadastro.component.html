@@ -1,3 +1,9 @@
+<!-->Angular controla o formulário, quando importamos o FormsModule
+  #frm="ngForm - para obter uma instancia da diretiva que gerencia o formulário
+   #frm - nome da variavel
+   (ngSubmit)="adicionar(frm) - quando o formulário for submetido, vai chamar o metodo adicionar
+   do componente(ItemCadastroComponent) passando a variavel frm.
+<-->
 <form #frm="ngForm" (ngSubmit)="adicionar(frm)" autocomplete="off">
   <div class="ui-g">
 
@@ -5,8 +11,17 @@
       <h1>Gestão de Patrimônio</h1>
     </div>
 
+    <!--> ui-fluid - componete ocupa todo espaço reservado para ele,ou seja,
+      este input vai ocupar metade da tela: ui-g-6
+      ngModel: para registrar os campos, senão o formulário ficará vazio, sem esses dados
+      mesmo tendo digitado eles
+      Outra coisa importante: esses campos devem ter seus nomes registrados, por isso
+      deve ter o atributo name com o valor que representa os atributos/propriedades do objeto do back end
+      nesse caso 'Item'
+   <-->
     <div class="ui-g-6 ui-fluid">
       <label>Etiqueta</label>
+      <!--> mask="aa9999 - aceita letras e numeros 2 letras e 4 numeros<-->
       <p-inputMask name="etiqueta" mask="aa9999"
         ngModel [required]="true"></p-inputMask>
     </div>
@@ -22,7 +37,11 @@
       <input pInputText name="descricao"
         ngModel [required]="true">
     </div>
-
+    <!-->lembre-se que 'frm' controla o estado do formulario
+      então se este formulario estiver invalido 'frm.invalid', ou seja, se algum dos campos não
+      for preenchido, já que foi colocado ' [required]="true"',
+      o botão fica esmaecido.
+    <-->
     <div class="ui-g-12">
       <button pButton type="submit" label="Adicionar"
         [disabled]="frm.invalid"></button>
